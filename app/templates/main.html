@@ -1,0 +1,243 @@
+<!-- <!doctype html>
+<html>
+<head>
+    <title>Insurance Claim Prediction</title>
+    <style>
+        body {
+            background-color: #E6E6FA;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            margin: auto;
+            width: 35%;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+        }
+        fieldset {
+            border: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+        }
+        .result {
+            margin: auto;
+            width: 35%;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('main') }}" method="POST">
+        <fieldset>
+            <legend>Enter Details</legend>
+
+            <label for="age">Age:</label>
+            <input type="number" name="age" id="age" required>
+
+            <label for="sex">Sex:</label>
+            <input list="sex_list" name="sex" id="sex" required>
+            <datalist id="sex_list">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </datalist>
+
+            <label for="bmi">BMI:</label>
+            <input type="number" name="bmi" id="bmi" required step="0.1">
+
+            <label for="children">Number of Children:</label>
+            <input type="number" name="children" id="children" required>
+
+            <label for="smoker">Smoker:</label>
+            <input list="smoker_list" name="smoker" id="smoker" required>
+            <datalist id="smoker_list">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </datalist>
+
+            <label for="region">Region:</label>
+            <input list="region_list" name="region" id="region" required>
+            <datalist id="region_list">
+                <option value="0">Northeast</option>
+                <option value="1">Northwest</option>
+                <option value="2">Southeast</option>
+                <option value="3">Southwest</option>
+            </datalist>
+
+            <label for="charges">Insurance Charges:</label>
+            <input type="number" name="charges" id="charges" required step="0.01">
+
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    {% if result is not none %}
+    <div class="result">
+        <h2>Prediction</h2>
+        {% if original_input %}
+            <h3>Input Data:</h3>
+            <ul>
+                {% for key, value in original_input.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h3>Insurance Claim Approval:</h3>
+        <p style="font-size: 50px;">{{ result }}</p>
+    </div>
+    {% endif %}
+</body>
+</html> -->
+
+<!doctype html>
+<html>
+<head>
+    <title>Insurance Claim Prediction</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .header {
+            background-color: #4A90E2;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+        .container {
+            margin: auto;
+            width: 40%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+        fieldset {
+            border: none;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #4A90E2;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #357ABD;
+        }
+        .result {
+            margin: auto;
+            width: 40%;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- <img src="app\images.jpeg" alt="Logo" class="logo"> -->
+        <span>Insurance Claim Prediction</span>
+    </div>
+    
+    <div class="container">
+        <form action="{{ url_for('main') }}" method="POST">
+            <fieldset>
+                <legend><strong>Enter Details</strong></legend>
+                
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" required>
+                
+                <label for="sex">Sex:</label>
+                <input list="sex_list" name="sex" id="sex" required>
+                <datalist id="sex_list">
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                </datalist>
+                
+                <label for="bmi">BMI:</label>
+                <input type="number" name="bmi" id="bmi" required step="0.1">
+                
+                <label for="children">Number of Children:</label>
+                <input type="number" name="children" id="children" required>
+                
+                <label for="smoker">Smoker:</label>
+                <input list="smoker_list" name="smoker" id="smoker" required>
+                <datalist id="smoker_list">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </datalist>
+                
+                <label for="region">Region:</label>
+                <input list="region_list" name="region" id="region" required>
+                <datalist id="region_list">
+                    <option value="0">Northeast</option>
+                    <option value="1">Northwest</option>
+                    <option value="2">Southeast</option>
+                    <option value="3">Southwest</option>
+                </datalist>
+                
+                <label for="charges">Insurance Charges:</label>
+                <input type="number" name="charges" id="charges" required step="0.01">
+                
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </div>
+    
+    {% if result is not none %}
+    <div class="result">
+        <h2>Prediction</h2>
+        {% if original_input %}
+            <h3>Input Data:</h3>
+            <ul>
+                {% for key, value in original_input.items() %}
+                    <li><strong>{{ key }}:</strong> {{ value }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h3>Insurance Claim Approval:</h3>
+        <p style="font-size: 50px; color: #4A90E2;"><strong>{{ result }}</strong></p>
+    </div>
+    {% endif %}
+</body>
+</html>
+

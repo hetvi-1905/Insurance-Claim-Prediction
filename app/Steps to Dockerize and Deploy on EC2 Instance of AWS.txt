@@ -1,0 +1,95 @@
+# # go to this folder loc in Terminal : C:\Users\Admin\OneDrive\Desktop\AAD Project\Insurance Claim Prediction APP\app> ( cd app )
+
+# ## then run the following commands one by one in VS code terminal/cmd:
+
+# # 1) docker image build -t insurance-api1 .
+
+# # 2) docker run -p 5000:5000 insurance-api1
+
+# # 3) docker login
+
+# # 4) docker images
+
+# # 5) docker tag insurance-api:latest hetvi19/insurance-api1:latest  
+
+# # 6) docker push hetvi19/insurance-api1:latest   
+
+# # 7) docker pull hetvi19/insurance-api1:latest 
+
+# # 8) docker run -d -p 5000:5000 hetvi19/insurance-api1
+
+# # go to port : will get "Insurance Claim Prediction API is Running!"
+
+# # for testing : http://127.0.0.1:5000/predict?age=45&sex=1&bmi=28.5&children=2&smoker=0&region=3&charges=3000.50
+
+
+# ### <-----------Tutorail for dockerization on EC2:  https://youtu.be/qNIniDftAcU?si=HbXD6WAGRfsl4Ies ---------------> 
+# # https://www.youtube.com/watch?v=wHy0JNwrB9k 
+
+
+
+# #### Run this commands in VS code terminal --->
+# # chmod 400 InsuranceApi1.pem   ( if not in folder: cd app)
+# # scp -i InsuranceApp.pem Dockerfile insurance_model.pkl app.py requirements.txt ubuntu@13.53.177.52:/home/ubuntu 
+# scp -i insuranceApp.pem -r templates ubuntu@51.21.190.52:~ 
+
+
+# #### Run this commands in AWS EC2 --->
+# # sudo apt update && sudo apt install docker.io -y
+# # sudo systemctl start docker
+# # sudo systemctl enable docker
+# # sudo usermod -aG docker ubuntu 
+# # docker login
+
+               
+# #### Run this commands in AWS EC2 --->
+# # sudo docker image build -t hetvi19/insurance-api1 .
+# # sudo docker images
+# # sudo docker run -p 5000:5000 hetvi19/insurance-api1
+# # docker tag insurance-api:latest hetvi19/insurance-api:latest  
+# # docker push hetvi19/insurance-api1:latest  
+
+# ## run whenever u want after once it is built
+# # docker pull your-dockerhub-username/insurance-api    ---> docker pull hetvi19/insurance-api1
+# # docker run -d -p 5000:5000 your-dockerhub-username/insurance-api --->  docker run -d -p 5000:5000 hetvi19/insurance-api1
+# # OR --->  sudo docker run -p 5000:5000 insurance-api1
+
+# # http://your-ec2-ip:8501     ----> http://13.51.199.170:8501
+
+
+# ### port already given hoi toh ---->
+# # sudo docker ps
+# # sudo docker stop <ID of instance>                     or     sudo docker stop $(sudo docker ps -q)  # Stop all running containers
+# # sudo docker rm <ID of instance>                       or     sudo docker rm $(sudo docker ps -aq)  # Remove all stopped containers
+# # sudo docker run -d -p 5000:5000 insurance-api
+# # curl -X GET "http://localhost:5000/"
+# # curl -X POST "http://localhost:5000/predict"      -H "Content-Type: application/json"      -d '{"age":30,"sex":1,"bmi":28.5,"children":2,"smoker":0,"region":3,"charges":3000.50}'
+
+# # scp -i InsuranceApi1.pem insurance_model.pkl ubuntu@13.53.177.52:/home/ubuntu/
+
+
+#### sir's code::: ----------------------------->
+
+# #### Run this commands in VS code terminal --->
+# # chmod 400 InsuranceApi1.pem   ( if not in folder: cd app)
+# # scp -i InsuranceApp.pem Dockerfile insurance_model.pkl app.py requirements.txt ubuntu@13.53.177.52:/home/ubuntu 
+# scp -i insuranceApp.pem -r templates ubuntu@51.21.190.52:~ 
+
+
+# #### Run this commands in AWS EC2 --->
+# # sudo apt update && sudo apt install docker.io -y
+# # sudo systemctl start docker
+# # sudo systemctl enable docker
+# # sudo usermod -aG docker ubuntu 
+# # docker login
+# sudo docker build -t hetvi19/insurance-api1 . 
+
+### ran on VS code terminal (local device)
+
+# docker save -o insurance-app.tar insurance-api1   -----> ran on VS code terminal 
+# scp -i insuranceApp.pem insurance-app.tar ubuntu@51.21.190.52:~     -----> ran on vs code terminal 
+
+### run on EC2
+# sudo docker load -i insurance-app.tar
+# sudo docker run -d -p 5000:5000 insurance-app
+# sudo docker ps
