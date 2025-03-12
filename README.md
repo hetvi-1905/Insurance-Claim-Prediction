@@ -96,12 +96,12 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 
 
 ## 🛠 Troubleshooting ⚠️
+
 - If permission is denied while connecting to EC2:
   ```bash
   chmod 400 claim1.pem
   ```
 - If the URL is not working, ensure Flask is running and security group rules allow port 5000.
-
 
 ## 🎯 Features
 ✅ User-friendly Web Interface  
@@ -111,8 +111,7 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 ✅ Dockerized for Scalability  
 
 ## UI APP 
-
-
+![UI1](https://github.com/user-attachments/assets/3c1d7ba9-6f02-455b-8146-8be7411964bd.png)
 
 ## 📜 License
 This project is open-source and free to use.
