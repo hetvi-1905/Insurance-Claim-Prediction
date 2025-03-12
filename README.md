@@ -7,7 +7,8 @@ The **Insurance Claim Prediction** system is a machine learning-based web applic
 The dataset consists of the following features:
 - **age** (int) - Age of the insured
 - **sex** (binary: 1 for Male, 0 for Female)
-- **bmi** (float) - Body Mass Index
+- **bmi** (float) - Body Mass Index!
+
 - **children** (int) - Number of children
 - **smoker** (binary: 1 for Yes, 0 for No)
 - **region** (categorical: 0=Northeast, 1=Northwest, 2=Southeast, 3=Southwest)
@@ -108,6 +109,9 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 ✅ Flask API Backend  
 ✅ Deployed on AWS EC2  
 ✅ Dockerized for Scalability  
+
+## UI APP 
+[UI 1](https://github.com/user-attachments/assets/25604bcb-e9c7-4727-868d-85b103502e99)
 
 ## 📜 License
 This project is open-source and free to use.
