@@ -111,7 +111,7 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 ✅ Dockerized for Scalability  
 
 ## UI APP 
-![UI1](https://github.com/user-attachments/assets/3c1d7ba9-6f02-455b-8146-8be7411964bd.png)
+![UI1](https://github.com/user-attachments/assets/3c1d7ba9-6f02-455b-8146-8be7411964bd)
 
 ## 📜 License
 This project is open-source and free to use.
