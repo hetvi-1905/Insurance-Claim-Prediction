@@ -112,6 +112,8 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 
 ## UI APP 
 [UI 1](https://github.com/user-attachments/assets/25604bcb-e9c7-4727-868d-85b103502e99)
+<img src="(https://github.com/user-attachments/assets/25604bcb-e9c7-4727-868d-85b103502e99)" alt="Alt text" width="500">
+
 
 ## 📜 License
 This project is open-source and free to use.
