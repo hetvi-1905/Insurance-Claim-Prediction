@@ -6,25 +6,10 @@ Machine Learning, Flask, Docker, AWS EC2 Deployment
 ## 📌 Project Overview
 The **Insurance Claim Prediction** system is a machine learning-based web application that predicts whether an insurance claim will be made based on user input. It uses a classification model trained on various factors such as age, BMI, number of children, smoking status, and region.
 
-## 📂 Project Structure
-```
-Insurance-Claim-Prediction/
-│── model/
-│   ├── train_model.py          # Script to train the model
-│   ├── insurance_model.pkl     # Saved trained model
-│
-│── app/
-│   ├── main.py                 # Flask backend
-│   ├── templates/
-│   │   ├── index.html          # HTML form for user input
-│   ├── static/
-│   │   ├── styles.css          # Styles for UI
-│
-│── requirements.txt            # Python dependencies
-│── Dockerfile                  # Docker containerization
-│── README.md                   # Project documentation
-│── run.sh                      # Script to start the application
-```
+# Insurance Claim Prediction
+
+## Project Overview
+This project predicts whether an insurance claim will be made based on user input features like age, BMI, smoker status, and more. It is a full-stack ML application deployed using Flask, Docker, and AWS EC2.
 
 ## 📊 Dataset
 The dataset consists of the following features:
@@ -37,12 +22,30 @@ The dataset consists of the following features:
 - **charges** (float) - Insurance charges
 - **insurance_claim** (binary: 1 for Claimed, 0 for Not Claimed)
 
-## 🔧 Installation & Setup
+## Tech Stack
+- **Machine Learning**: Scikit-learn
+- **Backend**: Flask
+- **Frontend**: HTML, CSS
+- **Deployment**: AWS EC2, Docker
 
+## Project Structure
+```
+app/
+│── templates/                  # Contains HTML files for UI
+│── app.py                      # Flask application file
+│── claim1.pem                  # AWS EC2 key file
+│── Dockerfile                  # Docker setup file
+│── insurance_model.pkl         # Trained ML model
+│── model_training.ipynb        # Jupyter Notebook for training the model
+│── my-app.tar                  # Compressed project file for deployment
+│── requirements.txt            # Dependencies list
+```
+
+## 🔧 Installation & Setup
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/your-repo/insurance-claim-prediction.git
-cd insurance-claim-prediction
+git clone <repository_link>
+cd app
 ```
 
 ### 2️⃣ Install Dependencies
@@ -50,42 +53,31 @@ cd insurance-claim-prediction
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run the Application Locally
+### 3️⃣ Run Flask Application Locally
 ```bash
-python app/main.py
+python app.py
 ```
-Access the web app at: `http://127.0.0.1:5000`
-
-## 🚀 Model Training
-To train the model, run:
-```bash
-python model/train_model.py
+Open your browser and go to:
 ```
-This will generate `insurance_model.pkl`.
-
-## 🖥️ Deployment on AWS EC2
-
-### 1️⃣ Transfer Files to EC2
-```bash
-scp -i your-key.pem -r insurance-claim-prediction ubuntu@your-ec2-ip:/home/ubuntu/
+http://127.0.0.1:5000
 ```
 
-### 2️⃣ Connect to EC2
+### 4️⃣ Train the Model 🚀 (if needed)
+Run `model_training.ipynb` in Jupyter Notebook to retrain the model and save it as `insurance_model.pkl`.
+
+## Docker Setup
+### 1️⃣ Build the Docker Image
 ```bash
-ssh -i your-key.pem ubuntu@your-ec2-ip
+docker build -t insurance-claim-app .
 ```
 
-### 3️⃣ Run the Application
+### 2️⃣ Run the Container
 ```bash
-cd insurance-claim-prediction
-python app/main.py
+docker run -p 5000:5000 insurance-claim-app
 ```
-
-### 4️⃣ Open the Web App
-Access at: `http://<EC2-PUBLIC-IP>:5000`
+Visit `http://localhost:5000` in your browser.
 
 ## 📦 Dockerization
-
 ### 1️⃣ Build Docker Image
 ```bash
 docker build -t insurance-claim-app .
@@ -94,7 +86,41 @@ docker build -t insurance-claim-app .
 ### 2️⃣ Run Docker Container
 ```bash
 docker run -p 5000:5000 insurance-claim-app
+
+## 🖥️ Deployment on AWS EC2
+### 1️⃣ Copy the Project to EC2
+Transfer the `.tar` file from your local machine to EC2:
+```bash
+scp -i claim1.pem my-app.tar ubuntu@<EC2-IP-ADDRESS>:/home/ubuntu/
 ```
+
+### 2️⃣ Connect to EC2
+```bash
+ssh -i claim1.pem ubuntu@<EC2-IP-ADDRESS>
+```
+
+### 3️⃣ Extract and Navigate
+```bash
+tar -xvf my-app.tar
+cd app
+```
+
+### 4️⃣ Run the Application
+```bash
+python app.py
+```
+Access the application using:
+```
+http://<EC2-IP-ADDRESS>:5000
+```
+
+## Troubleshooting
+- If permission is denied while connecting to EC2:
+  ```bash
+  chmod 400 claim1.pem
+  ```
+- If the URL is not working, ensure Flask is running and security group rules allow port 5000.
+
 
 ## 🎯 Features
 ✅ User-friendly Web Interface  
@@ -104,9 +130,8 @@ docker run -p 5000:5000 insurance-claim-app
 ✅ Dockerized for Scalability  
 
 ## 📜 License
-This project is licensed under the MIT License.
-
----
-Made with ❤️ by [Your Name] 🚀
+This project is open-source and free to use.
+Let me know if you need further modifications! 🚀
+Made with ❤️ by Hetvi Bhora 🚀
 
 
