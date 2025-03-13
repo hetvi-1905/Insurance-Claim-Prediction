@@ -115,6 +115,9 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 ![UI1](https://github.com/user-attachments/assets/3c1d7ba9-6f02-455b-8146-8be7411964bd)
 ![UI2](https://github.com/user-attachments/assets/4dbf5e59-6213-4121-812a-15a0f820b54a)
 
+## Power BI Analysis 
+![Power BI](https://github.com/user-attachments/assets/b891dc1d-4e3e-4545-92e9-af776fa3609e)
+
 ## 📜 License
 This project is open-source and free to use.
 Let me know if you need further modifications! 🚀
