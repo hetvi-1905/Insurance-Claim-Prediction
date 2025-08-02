@@ -174,15 +174,24 @@ KPI: Majority of insured individuals are non-smokers.
 KPI: Smokers form about 1 in 5 of the total population.
 
 📌 Summary of Key KPIs:
+
 Metric	KPI Value / Insight
-Highest Insurance Claims	Age ~18
-Insurance Charges (Female)	$9.43M (Higher than males)
-Insurance Charges (Male)	$8.32M
-Region with Most Children	Region 2 (26.08%)
-Smoker Population	20.41%
-Non-Smoker Population	79.59%
-BMI Peak Range	25–35
-Highest Charges by Age	Ages 40+
+
+Highest Insurance Claims:	Age ~18
+
+Insurance Charges (Female):	$9.43M (Higher than males)
+
+Insurance Charges (Male):	$8.32M
+
+Region with Most Children:	Region 2 (26.08%)
+
+Smoker Population:	20.41%
+
+Non-Smoker Population:	79.59%
+
+BMI Peak Range:	25–35
+
+Highest Charges by Age:	Ages 40+
 
 ## 📜 License
 This project is open-source and free to use.
