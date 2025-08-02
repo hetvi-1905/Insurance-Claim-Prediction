@@ -118,6 +118,71 @@ Access at: `http://<EC2-PUBLIC-IP>:5000`
 ## Power BI Analysis 
 ![Power BI](https://github.com/user-attachments/assets/b891dc1d-4e3e-4545-92e9-af776fa3609e)
 
+🎯🎯🎯 Key Performance Indicators (KPIs) derived from the Power BI dashboard titled "INSURANCE CLAIM PREDICTION":
+
+🔹 1. Insurance Claim Trends by Age
+Observation: Highest claims occur around age 18, with moderate fluctuation afterward.
+
+KPI: Peak insurance claims in early adulthood (around age 18).
+
+KPI: Consistent insurance claim activity between ages 40–60.
+
+🔹 2. Insurance Charges by Sex
+Total Charges by Sex:
+
+Female (1): 9.43 million
+
+Male (0): 8.32 million
+
+KPI: Females account for ~53.14% of total charges.
+
+KPI: Gender gap in total insurance charges (~1.11M more for females).
+
+🔹 3. Charges & Claims by Age
+KPI: Correlation between increased age and rising insurance charges from age 40 onward.
+
+KPI: Dual-axis analysis reveals that higher age groups incur higher charges despite relatively constant claims.
+
+🔹 4. Children Distribution by Region
+Region-wise Distribution:
+
+Region 2: 382 children (26.08%)
+
+Region 0: 373 children (25.46%)
+
+Region 3: 371 children (25.32%)
+
+Region 1: 339 children (23.14%)
+
+KPI: Region 2 has the highest number of children.
+
+KPI: Balanced distribution of children across regions (all ~23–26%).
+
+🔹 5. Age by BMI Distribution
+KPI: Highest density of individuals lies between BMI 25–35.
+
+KPI: Individuals aged 30–45 dominate the mid-range BMI band.
+
+🔹 6. Smoker Distribution by Region
+Smokers (1): ~20.41%
+
+Non-Smokers (0): ~79.59%
+
+KPI: Majority of insured individuals are non-smokers.
+
+KPI: Smokers form about 1 in 5 of the total population.
+
+📌 Summary of Key KPIs:
+Metric	KPI Value / Insight
+Highest Insurance Claims	Age ~18
+Insurance Charges (Female)	$9.43M (Higher than males)
+Insurance Charges (Male)	$8.32M
+Region with Most Children	Region 2 (26.08%)
+Smoker Population	20.41%
+Non-Smoker Population	79.59%
+BMI Peak Range	25–35
+Highest Charges by Age	Ages 40+
+
 ## 📜 License
 This project is open-source and free to use.
 Let me know if you need further modifications! 🚀
