@@ -144,6 +144,7 @@ KPI: Correlation between increased age and rising insurance charges from age 40 
 KPI: Dual-axis analysis reveals that higher age groups incur higher charges despite relatively constant claims.
 
 🔹 4. Children Distribution by Region
+
 Region-wise Distribution:
 
 Region 2: 382 children (26.08%)
@@ -159,13 +160,13 @@ KPI: Region 2 has the highest number of children.
 KPI: Balanced distribution of children across regions (all ~23–26%).
 
 🔹 5. Age by BMI Distribution
-KPI: Highest density of individuals lies between BMI 25–35.
 
+KPI: Highest density of individuals lies between BMI 25–35.
 KPI: Individuals aged 30–45 dominate the mid-range BMI band.
 
 🔹 6. Smoker Distribution by Region
-Smokers (1): ~20.41%
 
+Smokers (1): ~20.41%
 Non-Smokers (0): ~79.59%
 
 KPI: Majority of insured individuals are non-smokers.
